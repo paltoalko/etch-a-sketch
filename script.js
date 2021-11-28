@@ -7,7 +7,7 @@ const eraser = document.querySelector("#eraser")
 const newGrid = document.querySelector("#newgrid")
 const gridSize = document.querySelector(".slider")
 
-let color = "pink";
+let currentSize = 10;
 
 function setupGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -18,6 +18,7 @@ function setupGrid(size) {
         square.classList.add('grid-item');
         container.appendChild(square);
     }
+    
     chooseColor ();
     changeColor();
     clearGrid ();
@@ -70,10 +71,21 @@ function changeColor() {
 function clearGrid () {
    newGrid.addEventListener('click', function () {
     container.innerHTML = ''
-    setupGrid (20);
-
+    setupGrid (currentSize);
    })
 }
+function changeSize () {
+    gridSize.addEventListener('input', function () {
+        size = parseInt(gridSize.value)
+        container.innerHTML = ''
+        setupGrid (size);
+        
+    })
 
-setupGrid (20);
+
+}
+
+changeSize ();
+setupGrid (currentSize);
+
 
