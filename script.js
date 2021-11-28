@@ -1,6 +1,13 @@
 //DOM selectors
 const grid = document.querySelector('#container');
+const colorpck = document.querySelector("#pickclr")
+const blackclr = document.querySelector("#blackclr")
+const rgbclr = document.querySelector("#rgbclr")
+const eraser = document.querySelector("#eraser")
+const newGrid = document.querySelector("#newgrid")
+const gridSize = document.querySelector(".slider")
 
+let color = "pink";
 
 function setupGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -11,21 +18,62 @@ function setupGrid(size) {
         square.classList.add('grid-item');
         container.appendChild(square);
     }
-    hoverColor();
+    chooseColor ();
+    changeColor();
+    clearGrid ();
   }
 
-function hoverColor() {
+function chooseColor () {
+    if (rgbclr.addEventListener ('click', function () {
+        color = "rgb"
+    })) {return color}
+    else if (blackclr.addEventListener('click', function () {
+        color = "black"
+    })) {return color}
+    else if (eraser.addEventListener('click', function () {
+        color = "eraser"
+    })) {return color}
+    else if (colorpck.addEventListener('input', function () {
+        color = "colorpck.value";
+    })) {return color}
+    else {
+        color = "black"
+        return color
+    }
+}
+
+function changeColor() {
   let items = document.querySelectorAll('.grid-item');
   items.forEach(item => {
     item.addEventListener('mouseover', () => {
-    //   item.style.backgroundColor = "pink";
-    console.log("dupcia");
-    
+        switch (true) {
+            case (color === "black"):
+            item.style.backgroundColor = "black";
+            break;
+            
+            case (color === "eraser"):
+                item.style.backgroundColor = "white";
+            break;
+
+            case (color === "rgb"):
+                item.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            break;
+
+            case (color === "colorpck.value"):
+                item.style.backgroundColor = colorpck.value;
+            break;
+        }
     });
   });
 }
 
+function clearGrid () {
+   newGrid.addEventListener('click', function () {
+    container.innerHTML = ''
+    setupGrid (20);
 
+   })
+}
 
+setupGrid (20);
 
-setupGrid(4);

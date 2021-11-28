@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF5FF;
+  }
+.main {
+    margin-top:2%;
+}
+.header {
+    font-size: 4vw;
+    text-align: center;
+    color: #343A40;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15%;
+    margin-left: 15%;
+
+}
+.middle-up {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+}
+
+.leftclm {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 5px;
+    margin-top: -3%;
+}
+
+.pickclrbox {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftclrbox {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightclrbox {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pickclr {
+    text-align: center;
+    font-size: 1.5vw;
+    white-space: nowrap;
+    color: #343A40;
+}
+
+#pickclr {
+    width: 10vw;
+    height: 10vw;
+    border: none;
+    border-radius:50%;
+    -webkit-appearance: none;
+    background-color: transparent;
+    transition: 0.5s;
+    display: flex; 
+}
+
+#pickclr:hover {
+    width:11vw;
+    height: 11vw;
+    border-radius:50%;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+  }
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    height: 60%;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.btn {
+    width: 13vw;
+    height: auto;
+    font-size: 1vw;
+    background-color: #343A40;
+    border-radius: 4px;  
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition-duration: 0.4s;
+}
+
+#blackclr {
+    transition-duration: 0.4s;
+}
+#blackclr:hover {
+    background-color: black;
+}
+
+#eraser {
+    transition-duration: 0.4s;
+}
+
+#eraser:hover {
+    color:#343A40;;
+}
+
+#rgbclr:hover{
+    background-image:     linear-gradient(
+       to right, 
+       #E7484F,
+       #E7484F 16.65%,
+       #F68B1D 16.65%,
+       #F68B1D 33.3%,
+       #FCED00 33.3%,
+       #FCED00 49.95%,
+       #009E4F 49.95%,
+       #009E4F 66.6%,
+       #00AAC3 66.6%,
+       #00AAC3 83.25%,
+       #732982 83.25%,
+       #732982 100%,
+       #E7484F 100%
+      
+     );
+   animation:slidebg 10s linear infinite;
+ }
+
+ @keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+  }
+
+
+.rightclm {
+    display: flex; 
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.middle-down {
+    padding-top:4%;
+    padding-bottom: 4%;
+    display: flex;
+}
+
+.middle-down .h3 {
+    width: 40%;
+    font-size: 2vw;
+    text-align: center;
+    color: #343A40;
+    
+}
+
+.sliderbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    
+}
+
+.sliderelm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    
+}
+
+
+input[type='range'] {
+    -webkit-appearance: none;
+    background-color: #ddd;
+    height: 20px;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 20px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #343A40;
+    border-radius: 50%;
+    box-shadow: -210px 0 0 200px #666;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border: 0;
+  }
+  
+  input[type='range']::-moz-range-thumb {
+    background: #343A40;
+    border-radius: 50%;
+    box-shadow: -1010px 0 0 1000px #666;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border: 0;
+  }
+  
+  input[type="range"]::-moz-range-track {
+    background-color: #ddd;
+  }
+  input[type="range"]::-moz-range-progress {
+    background-color: #666;
+    height: 20px
+  }
+  input[type="range"]::-ms-fill-upper {
+    background-color: #ddd;
+  }
+  input[type="range"]::-ms-fill-lower {
+    background-color: #666;
+  }
+
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+}  
+
+.main a{
+    text-align: center;
+    color: #343A40;
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+/* Grid settings */
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+#container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+#container:hover {
+    box-shadow: 0 5px 5px rgba(0,0,0,0.19), 0 5px 5px rgba(0,0,0,0.23);
+}
+
+  
+.grid-item {
+    border: 1px solid rgba(221, 221, 221, 0.518);
+    text-align: center;
+  }
+  
+/* Media queries */
+
+
+@media (max-width: 992px) {
+    
+    #container {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin-top:4% ;
+    }
+        .middle-up {
+        flex-direction: column;
+    }
+
+    .leftclm {
+        width:100%;
+    }
+
+    .rightclm {
+        width: 100%;
+    }
+    .pickclrbox {
+        flex-direction: row-reverse;
+    }
+    .pickclr {
+    font-size: 3vw;
+    }
+
+    .leftclrbox {
+        width: 50%;
+    }
+
+    .rightclrbox {
+        width: 50%;
+    }
+    .buttons {
+        flex-direction: row;
+        font-size: 5vw;
+        height: 100%;
+        padding-bottom: 2%;
+        padding-top: 2%;
+    }
+
+
+    #container {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media  (max-width: 600px) {
+    .main {
+        margin-top:4% ;
+    }
+    .middle-up {
+        flex-direction: column;
+    }
+
+    .leftclm {
+        width:100%;
+    }
+
+    .rightclm {
+        width: 100%;
+    }
+    .pickclrbox {
+        flex-direction: row-reverse;
+    }
+    .pickclr {
+    font-size: 3vw;
+    }
+
+    .leftclrbox {
+        width: 50%;
+    }
+
+    .rightclrbox {
+        width: 50%;
+    }
+    .buttons {
+        flex-direction: row;
+        font-size: 5vw;
+        height: 100%;
+        padding-bottom: 2%;
+        padding-top: 2%;
+    }
+
+
+    #container {
+        width: 250px;
+        height: 250px;
+    }
+}

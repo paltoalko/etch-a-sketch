@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="main">
+        <h2 class="header">ETCH-A-SKETCH</h2>
+    <div class="middle">
+        <div class="middle-up">
+                <div class="leftclm">
+                    <div class="pickclrbox">
+                        <div class="leftclrbox">
+                            <input type="color" value="#C371D2" id="pickclr">
+                        </div>
+                        <div class="rightclrbox">
+                         <span class="pickclr">PICK COLOR</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn" id="blackclr">BLACK</button>
+                        <button class="btn" id="rgbclr">RAINBOW</button>
+                        <button class="btn" id="eraser">ERASER</button>
+                        <button class="btn" id="newgrid">CLEAR</button>
+                     </div>
+                </div>
+                <div class="rightclm">
+                    <div id="container"></div>
+                </div>
+        </div>
+
+        <div class="middle-down">
+            <div class="h3">
+                <h3>GRID SIZE</h3>
+            </div>
+            <div class="sliderbox">
+                <div class="sliderelm">
+                    <input type="range" min="1" max="50" value="" class="slider" id="myRange">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tag">
+    <a href="https://github.com/paltoalko" target="_blank">@martawesolowska</a>
+    </div>  
+</div>   
+<script src="script.js"></script>
+</body>
+</html>
